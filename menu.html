@@ -13,16 +13,63 @@
 <body class="bg-[#1f1f1f] text-white">
 
   <!-- Header -->
+<header class="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-70 text-white shadow-md">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold">☕ Ginasthel</h1>
+
+    <!-- Tombol hamburger (mobile) -->
+    <button id="menu-btn" class="text-white text-2xl md:hidden focus:outline-none">
+      &#9776; <!-- simbol tiga garis -->
+    </button>
+
+    <!-- Navigasi (desktop) -->
+    <nav class="hidden md:block">
+      <ul class="flex gap-4 font-medium text-base">
+        <li><a href="index.html" class="hover:underline text-amber-400 font-semibold">Home</a></li>
+        <li><a href="menu.html" class="hover:underline">Menu</a></li>
+        <li><a href="booking.html" class="hover:underline">Booking</a></li>
+        <li><a href="about.html" class="hover:underline">About</a></li>
+        <li><a href="promo.html" class="hover:underline">Promo</a></li>
+        <li><a href="#kontak" class="hover:underline">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-black bg-opacity-90">
+    <ul class="space-y-2 text-base font-medium">
+      <li><a href="index.html" class="block hover:underline ">Home</a></li>
+      <li><a href="menu.html" class="block hover:underline text-amber-400 font-semibold">Menu</a></li>
+      <li><a href="booking.html" class="block hover:underline">Booking</a></li>
+      <li><a href="about.html" class="block hover:underline">About</a></li>
+      <li><a href="promo.html" class="block hover:underline">Promo</a></li>
+      <li><a href="#kontak" class="block hover:underline">Kontak</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Script untuk toggle menu -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+
+  <!-- Header 
   <header class="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-70 text-white shadow-md">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
       <h1 class="text-2xl font-bold">☕ Ginasthel</h1>
       <nav>
-        <ul class="flex gap-6 font-medium text-base">
+        <ul class="flex gap-3 font-medium text-base">
           <li><a href="index.html" class="hover:underline ">Home</a></li>
           
           <li><a href="menu.html" class="hover:underline text-amber-400 font-semibold">Menu</a></li>
           <li><a href="booking.html" class="hover:underline">Booking</a></li>
-          <!--<li><a href="shop.html" class="hover:underline">Shop</a></li>-->
+          <li><a href="shop.html" class="hover:underline">Shop</a></li>
           <li><a href="about.html" class="hover:underline">About</a></li>
           <li><a href="promo.html" class="hover:underline">Promo</a></li>
           
@@ -30,7 +77,7 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header>-->
 
   <!-- Hero 
   <section class="pt-24 pb-12 bg-[url('./img/cafe.jpeg')] bg-cover bg-center relative h-[500px] ">

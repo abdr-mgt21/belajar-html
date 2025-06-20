@@ -10,15 +10,62 @@
 <body class="bg-stone-900 text-white font-sans pt-20">
 
   <!-- Header -->
+<header class="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-70 text-white shadow-md">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold">☕ Ginasthel</h1>
+
+    <!-- Tombol hamburger (mobile) -->
+    <button id="menu-btn" class="text-white text-2xl md:hidden focus:outline-none">
+      &#9776; <!-- simbol tiga garis -->
+    </button>
+
+    <!-- Navigasi (desktop) -->
+    <nav class="hidden md:block">
+      <ul class="flex gap-4 font-medium text-base">
+        <li><a href="index.html" class="hover:underline text-amber-400 font-semibold">Home</a></li>
+        <li><a href="menu2.html" class="hover:underline">Menu</a></li>
+        <li><a href="booking.html" class="hover:underline">Booking</a></li>
+        <li><a href="about.html" class="hover:underline">About</a></li>
+        <li><a href="promo.html" class="hover:underline">Promo</a></li>
+        <li><a href="#kontak" class="hover:underline">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-black bg-opacity-90">
+    <ul class="space-y-2 text-base font-medium">
+      <li><a href="index.html" class="block hover:underline ">Home</a></li>
+      <li><a href="menu2.html" class="block hover:underline">Menu</a></li>
+      <li><a href="booking.html" class="block hover:underline text-amber-400 font-semibold">Booking</a></li>
+      <li><a href="about.html" class="block hover:underline">About</a></li>
+      <li><a href="promo.html" class="block hover:underline">Promo</a></li>
+      <li><a href="#kontak" class="block hover:underline">Kontak</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Script untuk toggle menu -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+
+  <!-- Header 
   <header class="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-70 text-white shadow-md">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
       <h1 class="text-2xl font-bold">☕ Ginasthel</h1>
       <nav>
-        <ul class="flex gap-6 font-medium text-base">
+        <ul class="flex gap-3 font-medium text-base">
           <li><a href="index.html" class="hover:underline">Home</a></li>
           <li><a href="menu.html" class="hover:underline">Menu</a></li>
           <li><a href="booking.html" class="text-amber-400 font-semibold hover:underline">Booking</a></li>
-          <!--<li><a href="shop.html" class="hover:underline">Shop</a></li>-->
+          <li><a href="shop.html" class="hover:underline">Shop</a></li>
           <li><a href="about.html" class="hover:underline">About</a></li>
           <li><a href="promo.html" class="hover:underline">Promo</a></li>
           
@@ -26,144 +73,176 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header>-->
 
    <!-- Hero Section -->
-  <section class="relative bg-[url('https://lh7-us.googleusercontent.com/7FmWdhqMtXeo4rtoWBaYcVG0snRgI9_VbiZHdRsGafbkUyrt_P1WApSoueZCowc3__CkifPBcLdI5bONSCyZ5LZkHNnf8leXEkjRqL2Qm3DOerDwWOG4VmGVAFEwBf0-bjO6RBl-X5NPdeZfS-PIDWE')] bg-cover bg-center h-[500px] flex items-center justify-center">
+  <section class="relative bg-[url('https://lh7-us.googleusercontent.com/7FmWdhqMtXeo4rtoWBaYcVG0snRgI9_VbiZHdRsGafbkUyrt_P1WApSoueZCowc3__CkifPBcLdI5bONSCyZ5LZkHNnf8leXEkjRqL2Qm3DOerDwWOG4VmGVAFEwBf0-bjO6RBl-X5NPdeZfS-PIDWE')] bg-cover bg-center h-[400px] flex items-center justify-center">
     <div class="bg-black bg-opacity-50 absolute inset-0 z-0"></div>
     <div class="relative z-10 text-white text-center px-4 flex items-center justify-center flex-col h-full">
-      <h2 class="text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Filosofi dalam Setiap Cangkir</h2>
-      <p class="text-2xl animate__animated animate__fadeInUp">Bukan sekadar kopi, tapi pengalaman yang menyentuh hati</p>
+      <h2 class="text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Reservasi Mudah, Nikmati Suasana Nyaman</h2>
+      <p class="text-2xl animate__animated animate__fadeInUp">Pesan tempatmu sekarang dan nikmati kopi hangat di sudut favorit Ginasthel Café</p>
     </div>
   </section>
 
-  <!-- Booking Section -->
-   <div class="max-w-8xl mx-auto grid md:grid-cols-3 gap- bg-stone-900 p- rounded-xl shadow-lg">
-  <section class="py-16 px-4 ml-28 bg-stone800 text-white col-span-2" id="booking">
-    <div class="max-w-3xl mx-aut textcenter mb12 ">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 bg-stone-900 p-6 rounded-xl shadow-lg">
+
+  <!-- Bagian Kiri: Form Booking -->
+  <section class="text-white" id="booking">
+    <div class="max-w-2xl mx-auto mb-10 text-center">
       <h2 class="text-3xl font-bold mb-4">Reservasi Meja</h2>
-      <p class="text-gray-300 mb-12">Pesan meja sekarang untuk pengalaman ngopi yang lebih nyaman.</p>
+      <p class="text-gray-300">Pesan meja sekarang untuk pengalaman ngopi yang lebih nyaman.</p>
     </div>
-    <form id="bookingForm" class="max-w-2xl mx-aut0 grid gap-6 bg-stone900 pt-8 rounded-xl shadow-lg">
-  <!-- Info Diri -->
-  <div class="grid md:grid-cols-2 gap-4">
-    <div>
-      <label for="name" class="block mb-2 font-semibold">Nama</label>
-      <input type="text" id="name" class="w-full p-3 rounded bg-gray-700 text-white" required>
-    </div>
-    <div>
-      <label for="phone" class="block mb-2 font-semibold">Nomor Telepon</label>
-      <input type="tel" id="phone" class="w-full p-3 rounded bg-gray-700 text-white" required>
-    </div>
-  </div>
 
-  <!-- Tanggal dan Waktu -->
-  <div class="grid md:grid-cols-2 gap-4">
-    <div>
-      <label for="date" class="block mb-2 font-semibold">Tanggal</label>
-      <input type="date" id="date" class="w-full p-3 rounded bg-gray-700 text-white" required>
-    </div>
-    <div>
-      <label for="time" class="block mb-2 font-semibold">Waktu</label>
-      <input type="time" id="time" class="w-full p-3 rounded bg-gray-700 text-white" required>
-    </div>
-  </div>
+    <form id="bookingForm" class="space-y-6">
 
-  <!-- Jumlah Orang -->
-  <div>
-    <label for="people" class="block mb-2 font-semibold">Jumlah Orang</label>
-    <input type="number" id="people" min="1" class="w-full p-3 rounded bg-gray-700 text-white" required>
-  </div>
+      <!-- Info Diri -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label for="name" class="block mb-2 font-semibold">Nama</label>
+          <input type="text" id="name" class="w-full p-3 rounded bg-gray-700 text-white" required>
+        </div>
+        <div>
+          <label for="phone" class="block mb-2 font-semibold">Nomor Telepon</label>
+          <input type="tel" id="phone" class="w-full p-3 rounded bg-gray-700 text-white" required>
+        </div>
+      </div>
 
- <!-- Grid 2 Kolom: Makanan & Minuman -->
-<div class="grid md:grid-cols-2 gap-8">
-  <!-- Pilihan Makanan -->
-  <div>
-    <p class="font-semibold mb-2">Pilih Makanan dan Jumlah:</p>
-    <div class="space-y-3">
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="makanan" value="Nasi Goreng" id="nasi" class="peer" />
-        <label for="nasi" class="mr-auto">Red Velvet Cake</label>
-        <input type="number" min="1" max="10" data-menu="Nasi Goreng" class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
+      <!-- Tanggal & Waktu -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label for="date" class="block mb-2 font-semibold">Tanggal</label>
+          <input type="date" id="date" class="w-full p-3 rounded bg-gray-700 text-white" required>
+        </div>
+        <div>
+          <label for="time" class="block mb-2 font-semibold">Waktu</label>
+          <input type="time" id="time" class="w-full p-3 rounded bg-gray-700 text-white" required>
+        </div>
       </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="makanan" value="Mie Ayam" id="mie" class="peer" />
-        <label for="mie" class="mr-auto">Cheesecake</label>
-        <input type="number" min="1" max="10" data-menu="Mie Ayam" class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
+
+      <!-- Jumlah Orang -->
+      <div>
+        <label for="people" class="block mb-2 font-semibold">Jumlah Orang</label>
+        <input type="number" id="people" min="1" class="w-full p-3 rounded bg-gray-700 text-white" required>
       </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="makanan" value="Ayam Bakar" id="ayam" class="peer" />
-        <label for="ayam" class="mr-auto">Avocado Toast</label>
-        <input type="number" min="1" max="10" data-menu="Ayam Bakar" class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
+
+      <!-- Makanan & Minuman -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Makanan -->
+        <div>
+          <p class="font-semibold mb-2">Pilih Makanan dan Jumlah:</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="nasi" class="peer" />
+              <label for="nasi" class="mr-auto">Red Velvet Cake</label>
+              <input type="number" min="1" max="10" data-menu="Nasi Goreng"
+                class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="mie" class="peer" />
+              <label for="mie" class="mr-auto">Cheesecake</label>
+              <input type="number" min="1" max="10" data-menu="Mie Ayam"
+                class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="ayam" class="peer" />
+              <label for="ayam" class="mr-auto">Avocado Toast</label>
+              <input type="number" min="1" max="10" data-menu="Ayam Bakar"
+                class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="sate" class="peer" />
+              <label for="sate" class="mr-auto">Omelette</label>
+              <input type="number" min="1" max="10" data-menu="Sate"
+                class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="salad" class="peer" />
+              <label for="salad" class="mr-auto">Fruit Smoothie</label>
+              <input type="number" min="1" max="10" data-menu="Salad"
+                class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Minuman -->
+        <div>
+          <p class="font-semibold mb-2">Pilih Minuman dan Jumlah:</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="kopi" class="peer" />
+              <label for="kopi" class="mr-auto">Espresso</label>
+              <input type="number" min="1" max="10" data-menu="Kopi Hitam"
+                class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="thai" class="peer" />
+              <label for="thai" class="mr-auto">Cafe Latte</label>
+              <input type="number" min="1" max="10" data-menu="Thai Tea"
+                class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="cap" class="peer" />
+              <label for="cap" class="mr-auto">Iced Coffee</label>
+              <input type="number" min="1" max="10" data-menu="Cappuccino"
+                class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="teh" class="peer" />
+              <label for="teh" class="mr-auto">Iced Latte</label>
+              <input type="number" min="1" max="10" data-menu="Teh Tarik"
+                class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="jus" class="peer" />
+              <label for="jus" class="mr-auto">Cappuccino</label>
+              <input type="number" min="1" max="10" data-menu="Jus Jeruk"
+                class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="smoothie" class="peer" />
+              <label for="smoothie" class="mr-auto">Caffe Mocha</label>
+              <input type="number" min="1" max="10" data-menu="Smoothie"
+                class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white"
+                placeholder="0" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="makanan" value="Sate" id="sate" class="peer" />
-        <label for="sate" class="mr-auto">Omelette</label>
-        <input type="number" min="1" max="10" data-menu="Sate" class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
+
+      <!-- Total Harga (Opsional tampilkan nanti) -->
+      <!-- <div class="text-right font-semibold text-amber-400">
+        Total: <span id="totalHarga">Rp0</span>
+      </div> -->
+
+      <!-- Tombol Submit -->
+      <div class="text-center">
+        <button type="submit"
+          class="bg-amber-500 hover:bg-amber-600 text-black font-semibold px-6 py-3 rounded-lg shadow-md transition duration-300">
+          Pesan Sekarang
+        </button>
       </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="makanan" value="Salad" id="salad" class="peer" />
-        <label for="salad" class="mr-auto">Fruit Smoothie</label>
-        <input type="number" min="1" max="10" data-menu="Salad" class="jumlah-makanan hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
-      </div>
-    </div>
-  </div>
-  <!-- Pilihan Minuman -->
-  <div>
-    <p class="font-semibold mb-2">Pilih Minuman dan Jumlah:</p>
-    <div class="space-y-3">
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="minuman" value="Kopi Hitam" id="kopi" class="peer" />
-        <label for="kopi" class="mr-auto">Espresso </label>
-        <input type="number" min="1" max="10" data-menu="Kopi Hitam" class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
-      </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="minuman" value="Thai Tea" id="thai" class="peer" />
-        <label for="thai" class="mr-auto">Cafe Latte</label>
-        <input type="number" min="1" max="10" data-menu="Thai Tea" class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
-      </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="minuman" value="Cappuccino" id="cap" class="peer" />
-        <label for="cap" class="mr-auto">Iced Coffee</label>
-        <input type="number" min="1" max="10" data-menu="Cappuccino" class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
-      </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="minuman" value="Teh Tarik" id="teh" class="peer" />
-        <label for="teh" class="mr-auto">Iced Latte</label>
-        <input type="number" min="1" max="10" data-menu="Teh Tarik" class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
-      </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="minuman" value="Jus Jeruk" id="jus" class="peer" />
-        <label for="jus" class="mr-auto">Cappuccino</label>
-        <input type="number" min="1" max="10" data-menu="Jus Jeruk" class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
-      </div>
-      <div class="flex items-center gap-2">
-        <input type="checkbox" name="minuman" value="Smoothie" id="smoothie" class="peer" />
-        <label for="smoothie" class="mr-auto">Caffe Mocha</label>
-        <input type="number" min="1" max="10" data-menu="Smoothie" class="jumlah-minuman hidden peer-checked:inline w-16 p-1 rounded bg-gray-700 text-white" placeholder="0" />
-      </div>
-    </div>
+    </form>
+  </section>
+
+  <!-- Bagian Kanan: Gambar -->
+  <div class="flex items-center justify-center">
+    <img src="img/cangkir2.png" alt="Ilustrasi Cafe"
+      class="rounded-xl shadow-md w-full object-cover h-96 sm:h-[400px]">
   </div>
 </div>
-<!-- Total Harga -
-<div class="text-right font-semibold text-amber-400">
-  Total: <span id="totalHarga">Rp0</span>
-</div>-->
 
 
-  <!-- Tombol Submit -->
-  <div class="text-center">
-    <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-black font-semibold px-6 py-3 rounded-lg shadow-md transition duration-300">
-      Pesan Sekarang
-    </button>
-  
-</form>
-    </div>
-</section>
-<div class="flex items-center justify-center">
-    <img src="img/cangkir2.png" alt="Ilustrasi Cafe" class="rounded-xl shadow-md w-full object-cover h-96">
-  </div>
-</div>
+ 
 
    <section class=" py-12 px-4" id="kontak">
     <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 md:justify-items-center md:text-center">
@@ -171,7 +250,7 @@
         <i class="bi bi-telephone text-white text-2xl"></i>
         <h3 class="font-bold text-lg mb-2">Kontak</h3>
         <p>0812-3456-7890</p>
-        <p>cafe.bliss@email.com</p>
+        <p>cafe.ginasthel@email.com</p>
       </div>
       <div>
         <i class="bi bi-geo-alt text-2xl"></i>

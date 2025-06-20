@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kedai Ginasthel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stone-700-custom': '#3b3b3b', // Define a custom color if default stone-700 isn't quite right
+                        'stone-900-custom': '#1a1a1a', // A slightly darker tone if needed for background
+                        'gray-line': '#555', // For the separator line
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body class="bg-stone-900-custom text-white font-sans min-h-screen">
+    <!-- Header -->
+<header class="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-70 text-white shadow-md">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold">☕ Ginasthel</h1>
+
+    <!-- Tombol hamburger (mobile) -->
+    <button id="menu-btn" class="text-white text-2xl md:hidden focus:outline-none">
+      &#9776; <!-- simbol tiga garis -->
+    </button>
+
+    <!-- Navigasi (desktop)--> 
+    <nav class="hidden md:block">
+      <ul class="flex gap-4 font-medium text-base">
+        <li><a href="index.html" class="hover:underline text-amber-400 font-semibold">Home</a></li>
+        <li><a href="menu.html" class="hover:underline">Menu</a></li>
+        <li><a href="booking.html" class="hover:underline">Booking</a></li>
+        <li><a href="about.html" class="hover:underline">About</a></li>
+        <li><a href="promo.html" class="hover:underline">Promo</a></li>
+        <li><a href="#kontak" class="hover:underline">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-black bg-opacity-90">
+    <ul class="space-y-2 text-base font-medium">
+      <li><a href="index.html" class="block hover:underline ">Home</a></li>
+      <li><a href="menu.html" class="block hover:underline text-amber-400 font-semibold">Menu</a></li>
+      <li><a href="booking.html" class="block hover:underline">Booking</a></li>
+      <li><a href="about.html" class="block hover:underline">About</a></li>
+      <li><a href="promo.html" class="block hover:underline">Promo</a></li>
+      <li><a href="#kontak" class="block hover:underline">Kontak</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Script untuk toggle menu -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+<section class="relative bg-[url('https://sc04.alicdn.com/kf/H311d0e6aa755429c8147459ccaddfe16f.jpg')] bg-cover bg-center h-[500px] flex items-center justify-center ">
+    <div class="bg-black bg-opacity-50 absolute inset-0 z-0 text-white text-center  px-4 flex items-center justify-center flex-col h-full">
+      <h2 class="text-6xl  font-bold mb-4 animate__animated animate__fadeInDown ">Menu Kami </h2>
+      <p class="text-2xl animate__animated animate__fadeInUp">Nikmati pilihan kopi dan makanan terbaik dari kami</p>
+    </div>
+  </section>
+
+
+    <!--<section class="py-16 px-6 relative">
+        <div class="hidden md:block absolute top-8 left-24 text-4xl font-bold text-amber-400">Ginasthel</div>
+        <nav class="hidden md:block absolute top-8 right-24">
+            <a href="#" class="text-white ml-6 font-medium hover:text-amber-400 transition-colors">Home</a>
+            <a href="#" class="text-white ml-6 font-medium hover:text-amber-400 transition-colors">Menu</a>
+            <a href="#" class="text-white ml-6 font-medium hover:text-amber-400 transition-colors">Booking</a>
+            <a href="#" class="text-white ml-6 font-medium hover:text-amber-400 transition-colors">About</a>
+            <a href="#" class="text-white ml-6 font-medium hover:text-amber-400 transition-colors">Promo</a>
+            <a href="#" class="text-white ml-6 font-medium hover:text-amber-400 transition-colors">Kontak</a>
+        </nav>-->
+
+
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 mt-12 text-amber-400">Pilihan Menu</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-6xl mx-auto">
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all md:duration-300">
+                <img src="https://media.istockphoto.com/id/1177900338/id/foto/secangkir-espresso-dengan-biji-kopi.jpg?s=612x612&w=0&k=20&c=Wrq60UoiVaS4DyXMypEjYvfScLX_zZyqRFfVAalKrwk=" alt="Espresso" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Espresso</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">35K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Kopi pekat dengan aroma tajam dan rasa kuat. Cocok untuk yang suka kopi hitam asli.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">35K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all md:duration-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfbq3DyZf9qnYucIm3FgFHI1bTcdczzAzeMg&s" alt="Cafe Latte" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Cafe Latte</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">29K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Perpaduan sempurna antara espresso dan susu steamed yang creamy dan ringan.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">29K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all md:duration-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm2rwrriDHE3oMaX0LxdQU_eTvuf3PhCTslQ&s" alt="Red Velvet Cake" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Red Velvet Cake</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">50K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Kue lembut dan manis yang cocok untuk teman kopi atau teh di sore hari.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">50K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all md:duration-300">
+                <img src="https://athome.starbucks.com/sites/default/files/styles/recipe_xlarge_normal/public/2025-04/SBX_2025_Crema_Collection_Frothed_Coffee_CAH_Recipe_Gradient_Image.jpg.webp?itok=_bdU3K2q" alt="Iced Coffee" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Iced Coffee</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">29K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Kopi dingin yang menyegarkan, sempurna untuk cuaca panas.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">29K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all md:duration-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6y3cT-dExLa-dqr59LUuztGugET709U7DxQ&s" alt="Cappuccino" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Cappuccino</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">29K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Kombinasi espresso, susu steamed, dan foam susu yang creamy.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">29K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all md:duration-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAj8L3fC8b6HabXrgJCFlNy-b5Xw4D1kAbSg&s" alt="Cheesecake" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Cheesecake</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">20K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Kue keju yang lembut dan creamy, cocok untuk pencuci mulut.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">20K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all md:duration-300">
+                <img src="https://naturallieplantbased.com/wp-content/uploads/2023/01/IMG_4265_11zon.jpg" alt="Iced Latte" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Iced Latte</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">29K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Latte dingin yang menyegarkan, sempurna untuk dinikmati kapan saja.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">29K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all duration-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAyjV0NUPT8msS2j_BHdmXFipsV8Ab_8uI8Q&s" alt="Avocado Toast" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Avocado Toast</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">35K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Roti panggang dengan alpukat segar, sempurna untuk sarapan sehat.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">35K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all duration-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAflv1_WSxQfkPUVU0hkPX-pqJzCB1cV9Ypw&s" alt="Caffe Mocha" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Caffe Mocha</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">32K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Kombinasi sempurna antara espresso, cokelat, dan susu.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">32K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all duration-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8Bfxjlxr0gqqehTgNuT3IfZfCUCZWcZaUQ&s" alt="Omelette" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Omelette</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">30K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Omelet lezat dengan isian sayuran segar dan keju leleh.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">30K</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-0 md:p-4 rounded-lg md:bg-stone700-custom md:shadow-md md:hover:shadow-xl md:transition-all duration-300">
+                <img src="https://naturallieplantbased.com/wp-content/uploads/2023/01/IMG_4265_11zon.jpg" alt="Fruit Smoothie" class="w-24 h-24 object-cover rounded-full flex-shrink-0 mb-2 sm:mb-0">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">Fruit Smoothie</h4>
+                        <div class="flex-grow h-px bg-gray-line mx-4 sm:block hidden md:hidden"></div>
+                        <div class="text-lg font-semibold text-amber-400 sm:hidden">28K</div>
+                    </div>
+                    <p class="text-sm md:text-base text-stone-300">Smoothie buah segar yang menyehatkan, cocok untuk menyegarkan hari Anda.</p>
+                </div>
+                <div class="text-xl md:text-2xl font-semibold text-amber-400 hidden sm:block">28K</div>
+            </div>
+
+            </div>
+    </section>
+
+    <section class=" py-12 px-4" id="kontak">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 md:justify-items-center md:text-center">
+      <div>
+        <i class="bi bi-telephone text-white text-2xl"></i>
+        <h3 class="font-bold text-lg mb-2">Kontak</h3>
+        <p>0812-3456-7890</p>
+        <p>cafe.ginasthel@email.com</p>
+      </div>
+      <div>
+        <i class="bi bi-geo-alt text-2xl"></i>
+        <h3 class="font-bold text-lg mb-2">Alamat </h3>
+        <p>Jl. Kopi No.10, Bandung</p>
+        <!--<div class="flex gap-2 mt-2">
+          <a href="#" class="text-xl">📷</a>
+          <a href="#" class="text-xl">📘</a>
+          <a href="#" class="text-xl">📱</a>
+        </div>-->
+      </div>
+      <div>
+        <i class="bi bi-alarm text-2xl"></i>
+        <h3 class="font-bold text-lg mb-2">Jam Buka</h3>
+        <p>Senin–Jumat: 08.00 - 22.00</p>
+        <p>Sabtu–Minggu: 09.00 - 23.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <div class="flex justify-center gap-6 mb-4 text-sm">
+    <a href="https://wa.me/6281234567890" target="_blank" class="hover:text-amber-500"><i class="bi bi-whatsapp "style="font-size:1rem"></i></a>
+      
+    
+    <a href="https://instagram.com/namakopi" target="_blank" class="hover:text-amber-500"><i class="bi bi-instagram" style="font-size:1rem"></i></a>
+    <a href="https://facebook.com/namakopi" target="_blank" class="hover:text-amber-500"><i class="bi bi-facebook " style="font-size:1rem"></i></a>
+  </div>
+    <p>&copy; 2025 Cafe Ginasthel. All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>
